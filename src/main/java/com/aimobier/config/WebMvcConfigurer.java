@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import javax.servlet.MultipartConfigElement;
 
 @Configuration
-public class MyWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter{
+public class WebMvcConfigurer extends WebMvcConfigurerAdapter{
 
     /**
      * 文件上传临时路径

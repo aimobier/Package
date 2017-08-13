@@ -10,6 +10,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import javax.annotation.Resource;
 import javax.servlet.MultipartConfigElement;
@@ -80,4 +81,33 @@ public class PackageController {
 
         return "测试";
     }
+
+    @GetMapping("/send/{message}")
+    @ResponseBody
+    public String SendMessage(@PathVariable String message){
+
+
+        try {
+            String[] command = { "./myscript", "key", "ls -t | tail -n 1" };
+
+            Process process = Runtime.getRuntime().exec("ls");
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+
+            String s;
+
+            while ((s = reader.readLine()) != null) {
+
+                webSocket.convertAndSend("/topic/greetings",s);
+            }
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
+
+        return message;
+    }
+
+
+
 }

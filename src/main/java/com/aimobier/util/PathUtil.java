@@ -18,4 +18,9 @@ public class PathUtil {
 
         return filePathStr;
     }
+
+    public final static String SHELL_EXAMPLE_PATH(){
+
+        return new File("").getAbsolutePath()+"/shell/";
+    }
 }
