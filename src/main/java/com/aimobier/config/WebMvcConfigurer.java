@@ -25,14 +25,10 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter{
     }
 
     @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        super.addResourceHandlers(registry);
-    }
-
-    @Override
     public void addViewControllers(ViewControllerRegistry registry) {
 
-        registry.addViewController("index").setViewName("classpath:/META-INF/resources/index");
+        registry.addViewController("index").setViewName("index.html");
+        registry.addViewController("console").setViewName("console.html");
 
         super.addViewControllers(registry);
     }

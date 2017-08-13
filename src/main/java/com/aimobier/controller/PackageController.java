@@ -1,30 +1,27 @@
 package com.aimobier.controller;
 
-import com.aimobier.Application;
 import com.aimobier.entity.OdditySetObject;
 import com.aimobier.util.PathUtil;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.servlet.MultipartConfigFactory;
-import org.springframework.context.annotation.Bean;
-import org.springframework.core.io.ClassPathResource;
+import com.dd.plist.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
-import javax.annotation.Resource;
-import javax.servlet.MultipartConfigElement;
 import javax.servlet.http.HttpServletRequest;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.HashMap;
+import java.io.*;
+import java.text.ParseException;
+import java.util.Calendar;
 import java.util.List;
-import java.util.Map;
 
 @RestController
-public class PackageController {
+public class PackageController extends TextWebSocketHandler{
+
+
+    @Autowired
+    private SimpMessagingTemplate webSocket;
 
     @PostMapping(value = "/upload/{path}")
     @ResponseBody
@@ -77,8 +74,6 @@ public class PackageController {
     @ResponseBody
     public String handleFormUploadMethod(OdditySetObject setObject) {
 
-        System.out.println(setObject);
-
         return "测试";
     }
 
@@ -108,6 +103,53 @@ public class PackageController {
         return message;
     }
 
+
+
+    @GetMapping("/make")
+    @ResponseBody
+    String Make(){
+
+        try {
+            //Creating the root object
+            NSDictionary root = new NSDictionary();
+
+            NSArray people = new NSArray(2);
+
+            NSDictionary person1 = new NSDictionary();
+
+            person1.put("Name", "Peter");
+
+            Calendar cal = Calendar.getInstance();
+            cal.set(2011, 1, 13, 9, 28);
+            person1.put("RegistrationDate", cal.getTime()); //This will become a NSDate
+            person1.put("Age", 23); //This will become a NSNumber
+//            person1.put("Photo", new NSData(new File("peter.jpg")));
+
+            NSDictionary person2 = new NSDictionary();
+            person2.put("Name", "Lisa");
+            person2.put("Age", 42);
+            person2.put("RegistrationDate", new NSDate("2010-09-23T12:32:42Z"));
+//            person2.put("Photo", new NSData(new File("lisa.jpg")));
+
+            people.setValue(0, person1);
+            people.setValue(1, person2);
+
+            root.put("People", people);
+
+            PropertyListParser.saveAsXML(root, new File("/Users/jingwenzheng/Desktop/people.plist"));
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        } catch (ParseException e) {
+
+            e.printStackTrace();
+        }
+
+
+        return "ssss??";
+
+    }
 
 
 }

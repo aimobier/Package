@@ -12,6 +12,8 @@ repositories {
 
 dependencies {
 
+    // https://mvnrepository.com/artifact/com.googlecode.plist/dd-plist
+    compile group: 'com.googlecode.plist', name: 'dd-plist', version: '1.20'
 
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-websocket
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-websocket', version: '1.5.6.RELEASE'
