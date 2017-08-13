@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94cc99d9-fd0c-47bb-9c41-f62fa903d85a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/aimobier/config/MyWebMvcConfigurerAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/com/aimobier/config/MyWebMvcConfigurerAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/aimobier/controller/PackageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/aimobier/controller/PackageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/index.html" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/index.html" />
@@ -49,22 +48,6 @@
               <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
               <folding>
                 <marker date="1502611048000" expanded="true" signature="273:305" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScaleImageUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aimobier/util/ScaleImageUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4950">
-              <caret line="345" column="20" lean-forward="false" selection-start-line="345" selection-start-column="20" selection-end-line="345" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1327#1328#0" expanded="true" />
-                <element signature="e#1370#1371#0" expanded="true" />
-                <element signature="e#1408#1409#0" expanded="true" />
-                <element signature="e#1454#1455#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -748,6 +731,15 @@
               <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aimobier" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Package" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -909,12 +901,12 @@
       <workItem from="1502505530079" duration="725000" />
       <workItem from="1502506431511" duration="4791000" />
       <workItem from="1502515241031" duration="38740000" />
-      <workItem from="1502608116305" duration="4932000" />
+      <workItem from="1502608116305" duration="5088000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55936000" />
+    <option name="totallyTimeSpent" value="56092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="2556" height="1417" extended-state="6" />
@@ -1249,13 +1241,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4950">
           <caret line="345" column="20" lean-forward="false" selection-start-line="345" selection-start-column="20" selection-end-line="345" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1327#1328#0" expanded="true" />
-            <element signature="e#1370#1371#0" expanded="true" />
-            <element signature="e#1408#1409#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
