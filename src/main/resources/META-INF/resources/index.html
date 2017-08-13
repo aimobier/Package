@@ -29,10 +29,15 @@
 
     <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
 
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
     <style>
 
         .wizard .steps ul li {
             width: 20%;
+        }
+
+        .dropzone{
+            border: 1px dashed #1AB394;
         }
 
     </style>
@@ -239,17 +244,15 @@
                     <div class="col-lg-4">
                         <div class="ibox">
                             <div class="ibox-title">
-                                <h5>Dropzone.js</h5>
+                                <h5>ICON</h5>
                             </div>
                             <div class="ibox-content">
 
                                 <p>
-                                    <strong>Dropzone.js</strong> is a light weight JavaScript library that turns an HTML
-                                    element into a dropzone. This means that a user can drag and drop a file onto it,
-                                    and the file gets uploaded to the server via AJAX.
+                                    文件需要事先上传.
                                 </p>
 
-                                <form action="#" class="dropzone" id="dropzoneForm">
+                                <form action="/upload/icon" class="dropzone" id="dropzoneForm">
                                     <div class="fallback">
                                         <input name="file" type="file" multiple/>
                                     </div>
@@ -262,17 +265,15 @@
                     <div class="col-lg-8">
                         <div class="ibox">
                             <div class="ibox-title">
-                                <h5>Dropzone.js</h5>
+                                <h5>启动图</h5>
                             </div>
                             <div class="ibox-content">
 
                                 <p>
-                                    <strong>Dropzone.js</strong> is a light weight JavaScript library that turns an HTML
-                                    element into a dropzone. This means that a user can drag and drop a file onto it,
-                                    and the file gets uploaded to the server via AJAX.
+                                    文件需要事先上传.
                                 </p>
 
-                                <form action="#" class="dropzone" id="dropzoneForm">
+                                <form action="/upload/launch" class="dropzone" id="dropzoneForm">
                                     <div class="fallback">
                                         <input name="file" type="file" multiple/>
                                     </div>
@@ -297,7 +298,7 @@
                                     在配置该信息之前，需要在Apple Developer 设置 Apple ID 和 Itunes Connection 创建应用
                                 </p>
 
-                                <form id="form" action="#" class="wizard-big">
+                                <form id="form" action="/config" class="wizard-big" method="post" enctype="multipart/form-data">
 
                                     <h1> 基本信息</h1>
                                     <fieldset>
@@ -428,12 +429,12 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>日间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
+                                                <input type="text" name="tintcolorno" class="form-control demo1"
                                                        value="#5367ce"/>
                                             </div>
                                             <div class="form-group">
                                                 <label>夜间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
+                                                <input type="text" name="tintcolorni" class="form-control demo1"
                                                        value="#5367ce"/>
                                             </div>
                                         </div>
@@ -443,12 +444,12 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>日间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
+                                                <input type="text" name="titlecolorno" class="form-control demo1"
                                                        value="#5367ce"/>
                                             </div>
                                             <div class="form-group">
                                                 <label>夜间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
+                                                <input type="text" name="titlecolorni" class="form-control demo1"
                                                        value="#5367ce"/>
                                             </div>
                                         </div>
@@ -458,12 +459,12 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>日间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
+                                                <input type="text" name="backcolorno" class="form-control demo1"
                                                        value="#5367ce"/>
                                             </div>
                                             <div class="form-group">
                                                 <label>夜间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
+                                                <input type="text" name="backcolorni" class="form-control demo1"
                                                        value="#5367ce"/>
                                             </div>
                                         </div>
@@ -473,12 +474,12 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>日间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
+                                                <input type="text" name="bordercolorno" class="form-control demo1"
                                                        value="#5367ce"/>
                                             </div>
                                             <div class="form-group">
                                                 <label>夜间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
+                                                <input type="text" name="bordercolorni" class="form-control demo1"
                                                        value="#5367ce"/>
                                             </div>
                                         </div>
@@ -488,11 +489,11 @@
                                             </div>
                                             <div class="form-group">
                                                 <p>日间</p>
-                                                <input type="checkbox" class="form-control js-switch" checked/>
+                                                <input type="checkbox" name="statusstyleno" class="form-control js-switch" checked/>
                                             </div>
                                             <div class="form-group">
                                                 <p>夜间</p>
-                                                <input type="checkbox" class="form-control js-switch1" checked/>
+                                                <input type="checkbox" name="statusstyleno" class="form-control js-switch1" checked/>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
@@ -504,86 +505,47 @@
                                         </div>
                                     </fieldset>
 
-                                    <h1>样式设置</h1>
+                                    <h1>ICON 和 启动图</h1>
                                     <fieldset>
-                                        <h2>应用的初始化的样式配置</h2>
-                                        <div class="col-lg-2">
+                                        <h2>应用的icon&启动图 的设置</h2>
+                                        <div class="col-lg-4">
                                             <div class="form-group">
-                                                <label>主题色 *</label>
+                                                <label>ICON 图片大小为 1024x1024 *</label>
                                             </div>
-                                            <div class="form-group">
-                                                <label>日间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
-                                                       value="#5367ce"/>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>夜间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
-                                                       value="#5367ce"/>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <div class="form-group">
-                                                <label>标题颜色 *</label>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>日间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
-                                                       value="#5367ce"/>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>夜间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
-                                                       value="#5367ce"/>
+                                            <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                                                <div class="form-control" data-trigger="fileinput">
+                                                    <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                                                    <span class="fileinput-filename"></span>
+                                                </div>
+                                                <span class="input-group-addon btn btn-default btn-file">
+                                                <span class="fileinput-new">选择文件</span>
+                                                <span class="fileinput-exists">修改</span>
+                                                <input type="file" name="icon"/>
+                                                </span>
+                                                <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
                                             </div>
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
-                                                <label>背景颜色</label>
+                                                <label>启动图片资源 *</label>
                                             </div>
-                                            <div class="form-group">
-                                                <label>日间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
-                                                       value="#5367ce"/>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>夜间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
-                                                       value="#5367ce"/>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <div class="form-group">
-                                                <label>边框颜色</label>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>日间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
-                                                       value="#5367ce"/>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>夜间</label>
-                                                <input type="text" name="tintcolor" class="form-control demo1"
-                                                       value="#5367ce"/>
+                                            <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                                                <div class="form-control" data-trigger="fileinput">
+                                                    <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                                                    <span class="fileinput-filename"></span>
+                                                </div>
+                                                <span class="input-group-addon btn btn-default btn-file">
+                                                <span class="fileinput-new">选择文件</span>
+                                                <span class="fileinput-exists">修改</span>
+                                                <input type="file" name="launch"/>
+                                                </span>
+                                                <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
                                             </div>
                                         </div>
-                                        <div class="col-lg-2">
-                                            <div class="form-group">
-                                                <label>状态栏状态</label>
-                                            </div>
-                                            <div class="form-group">
-                                                <p>日间</p>
-                                                <input type="checkbox" class="form-control js-switch" checked/>
-                                            </div>
-                                            <div class="form-group">
-                                                <p>夜间</p>
-                                                <input type="checkbox" class="form-control js-switch1" checked/>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-4">
                                             <div class="text-center">
                                                 <div style="margin-top: 30px">
-                                                    <i class="fa fa-flask" style="font-size: 130px;color: #e5e5e5 "></i>
+                                                    <i class="fa fa-upload" style="font-size: 150px;color: #e5e5e5 "></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -616,14 +578,14 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="pull-right">
-            10GB of <strong>250GB</strong> Free.
-        </div>
-        <div>
-            <strong>Copyright</strong> Example Company &copy; 2014-2017
-        </div>
-    </div>
+    <!--<div class="footer">-->
+        <!--<div class="pull-right">-->
+            <!--10GB of <strong>250GB</strong> Free.-->
+        <!--</div>-->
+        <!--<div>-->
+            <!--<strong>Copyright</strong> Example Company &copy; 2014-2017-->
+        <!--</div>-->
+    <!--</div>-->
 </div>
 </div>
 
@@ -716,6 +678,7 @@
 <script src="oddity/custom.js"></script>
 
 <script>
+
     $(document).ready(function () {
 
         setFromStepFunction();

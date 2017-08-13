@@ -1,8 +1,20 @@
 Dropzone.options.dropzoneForm = {
     paramName: "file", // The name that will be used to transfer the file
     maxFilesize: 2, // MB
-    dictDefaultMessage: "<strong>Drop files here or click to upload. </strong></br> (This is just a demo dropzone. Selected files are not actually uploaded.)"
+    addRemoveLinks:true,
+    acceptedFiles:"image/jpeg,image/png,image/gif",
+
+
+
+    dictDefaultMessage: "<i class=\"fa fa-upload\" style=\"font-size: 100px;color: #e5e5e5 \"></i>",
+    dictFallbackMessage:"不支持你的浏览器",
+    dictFileTooBig:" 文件太大 ({{filesize}}MiB). 提交最大的文件为: {{maxFilesize}}MiB.",
+    dictInvalidFileType:"文件类型不支持，只能上传图片",
+    dictResponseError:"服务器没有反应 {{statusCode}}",
+    dictMaxFilesExceeded:"你最多上传{{maxFiles}}个文件"
 };
+
+
 
 function setFromStepFunction() {
 
@@ -49,7 +61,7 @@ function setFromStepFunction() {
             // if (currentIndex === 2 && priorIndex === 3)
             // {
             //     $(this).steps("previous");
-            // }
+            //
         },
         onFinishing: function (event, currentIndex)
         {
