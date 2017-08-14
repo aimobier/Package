@@ -32,9 +32,9 @@
     <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
     <style>
 
-        .wizard .steps ul li {
-            width: 20%;
-        }
+        /*.wizard .steps ul li {*/
+            /*width: 20%;*/
+        /*}*/
 
         .dropzone{
             border: 1px dashed #1AB394;
@@ -273,7 +273,7 @@
                                     文件需要事先上传.
                                 </p>
 
-                                <form action="/upload/launch" class="dropzone" id="dropzoneForm">
+                                <form action="/upload/launch" class="dropzone" id="dropzoneForm1">
                                     <div class="fallback">
                                         <input name="file" type="file" multiple/>
                                     </div>
@@ -282,8 +282,6 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="ibox float-e-margins">
@@ -430,12 +428,12 @@
                                             <div class="form-group">
                                                 <label>日间</label>
                                                 <input type="text" name="tintcolorno" class="form-control demo1"
-                                                       value="#5367ce"/>
+                                                       placeholder="#5367ce"/>
                                             </div>
                                             <div class="form-group">
                                                 <label>夜间</label>
                                                 <input type="text" name="tintcolorni" class="form-control demo1"
-                                                       value="#5367ce"/>
+                                                       placeholder="#5367ce"/>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
@@ -445,12 +443,12 @@
                                             <div class="form-group">
                                                 <label>日间</label>
                                                 <input type="text" name="titlecolorno" class="form-control demo1"
-                                                       value="#5367ce"/>
+                                                       placeholder="#5367ce"/>
                                             </div>
                                             <div class="form-group">
                                                 <label>夜间</label>
                                                 <input type="text" name="titlecolorni" class="form-control demo1"
-                                                       value="#5367ce"/>
+                                                       placeholder="#5367ce"/>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
@@ -460,12 +458,12 @@
                                             <div class="form-group">
                                                 <label>日间</label>
                                                 <input type="text" name="backcolorno" class="form-control demo1"
-                                                       value="#5367ce"/>
+                                                       placeholder="#5367ce"/>
                                             </div>
                                             <div class="form-group">
                                                 <label>夜间</label>
                                                 <input type="text" name="backcolorni" class="form-control demo1"
-                                                       value="#5367ce"/>
+                                                       placeholder="#5367ce"/>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
@@ -475,12 +473,12 @@
                                             <div class="form-group">
                                                 <label>日间</label>
                                                 <input type="text" name="bordercolorno" class="form-control demo1"
-                                                       value="#5367ce"/>
+                                                       placeholder="#5367ce"/>
                                             </div>
                                             <div class="form-group">
                                                 <label>夜间</label>
                                                 <input type="text" name="bordercolorni" class="form-control demo1"
-                                                       value="#5367ce"/>
+                                                       placeholder="#5367ce"/>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
@@ -489,11 +487,11 @@
                                             </div>
                                             <div class="form-group">
                                                 <p>日间</p>
-                                                <input type="checkbox" name="statusstyleno" class="form-control js-switch" checked/>
+                                                <input type="checkbox" id="statusstyleno" name="statusstyleno" class="form-control js-switch" checked/>
                                             </div>
                                             <div class="form-group">
                                                 <p>夜间</p>
-                                                <input type="checkbox" name="statusstyleno" class="form-control js-switch1" checked/>
+                                                <input type="checkbox" id="statusstyleni" name="statusstyleni" class="form-control js-switch1" checked/>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
@@ -508,7 +506,7 @@
                                     <h1>ICON 和 启动图</h1>
                                     <fieldset>
                                         <h2>应用的icon&启动图 的设置</h2>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-5">
                                             <div class="form-group">
                                                 <label>ICON 图片大小为 1024x1024 *</label>
                                             </div>
@@ -525,7 +523,7 @@
                                                 <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-5">
                                             <div class="form-group">
                                                 <label>启动图片资源 *</label>
                                             </div>
@@ -542,32 +540,13 @@
                                                 <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-2">
                                             <div class="text-center">
                                                 <div style="margin-top: 30px">
                                                     <i class="fa fa-upload" style="font-size: 150px;color: #e5e5e5 "></i>
                                                 </div>
                                             </div>
                                         </div>
-                                    </fieldset>
-
-                                    <h1>Finish</h1>
-                                    <fieldset>
-
-                                        <h2>应用的初始化的样式配置</h2>
-                                        <div class="dz-preview dz-file-preview">
-                                            <div class="dz-details">
-                                                <div class="dz-filename"><span data-dz-name></span></div>
-                                                <div class="dz-size" data-dz-size></div>
-                                                <img data-dz-thumbnail/>
-                                            </div>
-                                            <div class="dz-progress"><span class="dz-upload"
-                                                                           data-dz-uploadprogress></span></div>
-                                            <div class="dz-success-mark"><span>✔</span></div>
-                                            <div class="dz-error-mark"><span>✘</span></div>
-                                            <div class="dz-error-message"><span data-dz-errormessage></span></div>
-                                        </div>
-
                                     </fieldset>
                                 </form>
                             </div>
@@ -676,6 +655,7 @@
 
 
 <script src="oddity/custom.js"></script>
+<script src="oddity/form.js"></script>
 
 <script>
 
