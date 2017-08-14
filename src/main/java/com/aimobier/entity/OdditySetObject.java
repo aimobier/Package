@@ -1,6 +1,18 @@
 package com.aimobier.entity;
 
+import com.aimobier.util.PathUtil;
+import com.dd.plist.NSArray;
+import com.dd.plist.NSDictionary;
+import com.dd.plist.NSNumber;
+import com.dd.plist.PropertyListParser;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.math.BigInteger;
 
 public class OdditySetObject {
 
@@ -257,5 +269,124 @@ public class OdditySetObject {
 
     public void setLaunch(MultipartFile launch) {
         this.launch = launch;
+    }
+
+
+    public NSDictionary fuseNSDictionary(NSDictionary dictionary){
+
+        dictionary.put("CFBundleDisplayName",this.getDisplayname());
+        dictionary.put("CFBundleIdentifier",this.getBundleidentifier());
+
+        dictionary.put("CFBundleVersion",this.getVersion());
+        dictionary.put("CFBundleShortVersionString",this.getBuild());
+
+
+        NSArray bundleURLSchemes = new NSArray(4);
+        bundleURLSchemes.setValue(0,this.urlTypeFactory("wechat",this.wechatappkey));
+        bundleURLSchemes.setValue(1,this.urlTypeFactory("sina","wb"+this.sinaappkey));
+        bundleURLSchemes.setValue(2,this.urlTypeFactory("tencent","tencent"+this.qqappkey));
+        bundleURLSchemes.setValue(3,this.urlTypeFactory("qq","QQ"+Integer.toString(Integer.parseInt(this.qqappkey), 16)));
+
+        dictionary.put("CFBundleURLTypes",bundleURLSchemes);
+
+
+        NSDictionary jingCustom = new NSDictionary();
+
+        jingCustom.put("UMengAppKey",this.umengappkey);
+        jingCustom.put("UMessageAppKey",this.umessageappkey);
+
+        jingCustom.put("WeChatAppKey",this.wechatappkey);
+        jingCustom.put("WeChatSecret",this.wechatsecret);
+        jingCustom.put("WeChatRedirecturl",this.wechatappkey);
+
+        jingCustom.put("SinaAppKey",this.sinaappkey);
+        jingCustom.put("SinaSecret",this.sinasecret);
+        jingCustom.put("SinaRedirecturl",this.sinaredirecturl);
+
+        jingCustom.put("QQAppKey",this.qqappkey);
+        jingCustom.put("QQSecret",this.qqappsecret);
+        jingCustom.put("QQRedirecturl",this.qqredirecturl);
+
+        jingCustom.put("TintColorNo",this.tintcolorno);
+        jingCustom.put("TintColorNi",this.tintcolorni);
+
+        jingCustom.put("TitleColorNo",this.titlecolorno);
+        jingCustom.put("TitleColorNi",this.titlecolorni);
+
+        jingCustom.put("BackColorNo",this.backcolorno);
+        jingCustom.put("BackColorNi",this.backcolorni);
+
+        jingCustom.put("BorderColorNo",this.bordercolorno);
+        jingCustom.put("BorderColorNi",this.bordercolorni);
+
+        jingCustom.put("StatusStyleNo",this.statusstyleno != null);
+        jingCustom.put("StatusStyleNi",this.statusstyleni != null);
+
+        dictionary.put("JCSetting",jingCustom);
+
+        return dictionary;
+    }
+
+    private NSDictionary urlTypeFactory(String name,String url){
+
+        NSArray bundleURLSchemes = new NSArray(1);
+        bundleURLSchemes.setValue(0,url);
+
+        NSDictionary bundleURLType = new NSDictionary();
+        bundleURLType.put("CFBundleTypeRole","Editor");
+        bundleURLType.put("CFBundleURLName",name);
+        bundleURLType.put("CFBundleURLSchemes",bundleURLSchemes);
+
+        return bundleURLType;
+    }
+
+    public void makeImage(IMAGETYPE type) throws Exception{
+
+        String path = "";
+        MultipartFile file = null;
+
+        switch (type){
+            case ICON:
+                path = "icon";
+                file = this.icon;
+                break;
+            case LAUNCH:
+                path = "launch";
+                file = this.launch;
+                break;
+        }
+
+        File filePath = new File(PathUtil.UPLOAD_FILE_PATH(path)+path+".png");
+
+        BufferedOutputStream stream = null;
+
+        if (!file.isEmpty()) {
+
+            try {
+
+                stream = new BufferedOutputStream(new FileOutputStream(filePath));
+
+                byte[] bytes = file.getBytes();
+
+                stream.write(bytes,0,bytes.length);
+
+            } catch (Exception e) {
+
+                e.printStackTrace();
+            } finally {
+
+                try {
+
+                    if (stream != null) {
+
+                        stream.close();
+                    }
+
+                } catch (IOException e) {
+
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }
