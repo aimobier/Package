@@ -1,5 +1,6 @@
 package com.aimobier.controller;
 
+import com.aimobier.entity.FILETYPE;
 import com.aimobier.entity.IMAGETYPE;
 import com.aimobier.entity.OdditySetObject;
 import com.aimobier.util.PathUtil;
@@ -21,7 +22,6 @@ import java.text.ParseException;
 @RestController
 public class PackageController extends TextWebSocketHandler{
 
-
     @Autowired
     private SimpMessagingTemplate webSocket;
 
@@ -29,11 +29,20 @@ public class PackageController extends TextWebSocketHandler{
     @ResponseBody
     public String handleFormUploadMethod(@Valid OdditySetObject setObject,BindingResult result) {
 
-        String[] command = { PathUtil.SHELL_FILE_PATH_STRING("clear.sh"), PathUtil.CLEAR_CONFIG_PATH_STRING(), PathUtil.CLEAR_UPLOAD_PATH_STRING()};
+        /// 清空以前的 文件
+        String[] clearOldFiles = { PathUtil.FILEString(FILETYPE.SHELL,"clear.sh"), PathUtil.FILEString(FILETYPE.CONFIG,"*"), PathUtil.FILEString(FILETYPE.UPLOAD,"*")};
+        sehll(clearOldFiles);
 
-        sehll(command);
-
+        /// 上传 ICON 和 LAUNCH
         this.makeIconAndLaunch(setObject);
+
+        /// 裁剪ICON
+        String[] makeICON = { PathUtil.FILEString(FILETYPE.SHELL,"iconshear.sh"), PathUtil.FILEString(FILETYPE.UPLOAD,"icon.png"), PathUtil.FILEString(FILETYPE.CONFIG,"AppIcon.appiconset/")};
+        sehll(makeICON);
+
+        /// 复制 ICON 配置文件
+        String[] configICON = { "cp","-rf", PathUtil.FILEString(FILETYPE.SHELL,"icon/Contents.json"), PathUtil.FILEString(FILETYPE.CONFIG,"AppIcon.appiconset/")};
+        sehll(configICON);
 
         return setObject.getStatusstyleni()+"---"+setObject.getStatusstyleno()+"--"+setObject.getIcon().getSize();
     }
@@ -88,16 +97,13 @@ public class PackageController extends TextWebSocketHandler{
             send(e.getLocalizedMessage());
         }
 
-
-        System.out.println(PathUtil.OLD_INFO_PLIST_FILE());
-
         try {
 
-            NSDictionary rootDict = (NSDictionary) PropertyListParser.parse(PathUtil.OLD_INFO_PLIST_FILE());
+            NSDictionary rootDict = (NSDictionary) PropertyListParser.parse(PathUtil.FILE(FILETYPE.ROOT,"info.plist"));
 
             rootDict = setObject.fuseNSDictionary(rootDict);
 
-            PropertyListParser.saveAsXML(rootDict,PathUtil.NEW_INFO_PLIST_FILE());
+            PropertyListParser.saveAsXML(rootDict,PathUtil.FILE(FILETYPE.CONFIG,"info.plist"));
 
             send("配置 info.plst 文件 成功");
 

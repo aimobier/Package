@@ -356,7 +356,7 @@ public class OdditySetObject {
                 break;
         }
 
-        File filePath = new File(PathUtil.UPLOAD_FILE_PATH(path)+path+".png");
+        File filePath = new File(PathUtil.FILEString(FILETYPE.UPLOAD,path+".png"));
 
         BufferedOutputStream stream = null;
 

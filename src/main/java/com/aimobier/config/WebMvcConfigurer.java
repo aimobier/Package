@@ -1,5 +1,6 @@
 package com.aimobier.config;
 
+import com.aimobier.entity.FILETYPE;
 import com.aimobier.util.PathUtil;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +21,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter{
     @Bean
     MultipartConfigElement multipartConfigElement() {
         MultipartConfigFactory factory = new MultipartConfigFactory();
-        factory.setLocation(PathUtil.UPLOAD_TMP_FILE_PATH());
+        factory.setLocation(PathUtil.FILEString(FILETYPE.TMP,""));
         return factory.createMultipartConfig();
     }
 

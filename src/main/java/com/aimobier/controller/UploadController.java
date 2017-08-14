@@ -1,5 +1,6 @@
 package com.aimobier.controller;
 
+import com.aimobier.entity.FILETYPE;
 import com.aimobier.util.PathUtil;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,7 +36,7 @@ public class UploadController {
 
                 try {
 
-                    File cFile = new File(PathUtil.UPLOAD_FILE_PATH(path)+file.getOriginalFilename());
+                    File cFile = new File(PathUtil.FILEString(FILETYPE.UPLOAD,path)+file.getOriginalFilename());
 
                     stream = new BufferedOutputStream(new FileOutputStream(cFile));
 
