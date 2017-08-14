@@ -32,7 +32,7 @@ function connectionSuccess(info) {
     $("a").remove();
 
     stompClient.subscribe('/topic/greetings', function (greeting) {
-        sendMessage(greeting);
+        sendMessage(greeting.body);
     });
 }
 
