@@ -84,7 +84,7 @@ fi
 info 'Generate icon-60@2x.png ...'
 convert "$SRC_FILE" -resize 120x120 "$DST_PATH/icon-60@2x.png"
 info 'Generate icon-60@3x.png ...'
-convert "$SRC_FILE" -resize 180x180 "$DST_PATH/icon-60@2x.png"
+convert "$SRC_FILE" -resize 180x180 "$DST_PATH/icon-60@3x.png"
 
 info 'Generate icon-notification@2x.png ...'
 convert "$SRC_FILE" -resize 40x40 "$DST_PATH/icon-notification@2x.png"
