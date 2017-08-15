@@ -110,7 +110,13 @@ function conifgureColorPicker() {
     var elem = document.querySelector('.js-switch');
     var switchery = new Switchery(elem, { color: '#1AB394' });
 
-
     var elem = document.querySelector('.js-switch1');
     var switchery = new Switchery(elem, { color: '#1AB394' });
+
+    var elem = document.querySelector('.js-switch2');
+    var switchery = new Switchery(elem, { color: '#1AB394' });
+
+
+    // var elem = document.querySelector('.js-switch1');
+    // var switchery = new Switchery(elem, { color: '#1AB394' });
 }
