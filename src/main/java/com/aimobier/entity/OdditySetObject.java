@@ -6,6 +6,8 @@ import com.dd.plist.NSDictionary;
 import com.dd.plist.NSNumber;
 import com.dd.plist.PropertyListParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.BufferedOutputStream;
@@ -20,6 +22,7 @@ public class OdditySetObject {
     private String bundleidentifier;
     private String version;
     private String build;
+    private String indep;
 
     private String umengappkey;
     private String umessageappkey;
@@ -54,6 +57,14 @@ public class OdditySetObject {
 
     private MultipartFile icon;
     private MultipartFile launch;
+
+    public String getIndep() {
+        return indep;
+    }
+
+    public void setIndep(String indep) {
+        this.indep = indep;
+    }
 
     public String getDisplayname() {
         return displayname;
@@ -321,6 +332,7 @@ public class OdditySetObject {
 
         jingCustom.put("StatusStyleNo",this.statusstyleno != null);
         jingCustom.put("StatusStyleNi",this.statusstyleni != null);
+        jingCustom.put("IndepAppMode",this.indep != null);
 
         dictionary.put("JCSetting",jingCustom);
 
@@ -387,6 +399,59 @@ public class OdditySetObject {
                     e.printStackTrace();
                 }
             }
+        }
+    }
+
+    private SimpMessagingTemplate webSocket;
+
+    public void makeIconAndLaunch(SimpMessagingTemplate webSocket) {
+
+        this.webSocket = webSocket;
+
+        try {
+
+            this.makeImage(IMAGETYPE.ICON);
+
+            send("上传 ICON 完成");
+
+        } catch (Exception e) {
+
+            send(e.getLocalizedMessage());
+        }
+
+        try {
+
+            this.makeImage(IMAGETYPE.LAUNCH);
+
+            send("上传 LAUNCH 完成");
+
+        } catch (Exception e) {
+
+            send(e.getLocalizedMessage());
+        }
+
+        try {
+
+            NSDictionary rootDict = (NSDictionary) PropertyListParser.parse(PathUtil.FILE(FILETYPE.ROOT,"info.plist"));
+
+            rootDict = this.fuseNSDictionary(rootDict);
+
+            PropertyListParser.saveAsXML(rootDict,PathUtil.FILE(FILETYPE.CONFIG,"info.plist"));
+
+            send("配置 info.plst 文件 成功");
+
+        } catch (Exception e) {
+
+            send(e.getLocalizedMessage());
+        }
+    }
+
+
+    public void send(String message){
+
+        if (message != null){
+
+            webSocket.convertAndSend("/topic/greetings",message);
         }
     }
 }
