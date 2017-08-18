@@ -58,6 +58,279 @@ public class OdditySetObject {
     private MultipartFile icon;
     private MultipartFile launch;
 
+
+    private String appleid;
+    private String teamcode;
+    private String appname;
+    private String subtitle;
+    private String marketing; // 营销地址
+    private String privacyurl;
+    private String supporturl;
+    private String skuvalue;
+    private String keywords;
+    private String releasenote; // 更新说明
+    private String promotional; // 宣传文本
+    private String description;
+
+    private String loginname;
+    private String loginpass;
+    private String lastname;
+    private String firstname;
+    private String phonenumber;
+    private String email;
+    private String reviewnote; // 审核 备注
+
+    private String copyright;
+    private String swlastname;
+    private String swfirstname;
+    private String country;
+    private String state;
+    private String city;
+    private String adress;
+    private String swemail;
+    private String swphonenumber;
+    private String postalcode;
+
+    public String getAppleid() {
+        return appleid;
+    }
+
+    public void setAppleid(String appleid) {
+        this.appleid = appleid;
+    }
+
+    public String getTeamcode() {
+        return teamcode;
+    }
+
+    public void setTeamcode(String teamcode) {
+        this.teamcode = teamcode;
+    }
+
+    public String getReviewnote() {
+        return reviewnote;
+    }
+
+    public void setReviewnote(String reviewnote) {
+        this.reviewnote = reviewnote;
+    }
+
+    public String getSupporturl() {
+        return supporturl;
+    }
+
+    public void setSupporturl(String supporturl) {
+        this.supporturl = supporturl;
+    }
+
+    public String getReleasenote() {
+        return releasenote;
+    }
+
+    public void setReleasenote(String releasenote) {
+        this.releasenote = releasenote;
+    }
+
+    public String getMarketing() {
+        return marketing;
+    }
+
+    public void setMarketing(String marketing) {
+        this.marketing = marketing;
+    }
+
+    public String getKeywords() {
+        return keywords;
+    }
+
+    public void setKeywords(String keywords) {
+        this.keywords = keywords;
+    }
+
+    public String getAppname() {
+        return appname;
+    }
+
+    public void setAppname(String appname) {
+        this.appname = appname;
+    }
+
+    public String getSubtitle() {
+        return subtitle;
+    }
+
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
+    }
+
+    public String getPrivacyurl() {
+        return privacyurl;
+    }
+
+    public void setPrivacyurl(String privacyurl) {
+        this.privacyurl = privacyurl;
+    }
+
+    public String getSkuvalue() {
+        return skuvalue;
+    }
+
+    public void setSkuvalue(String skuvalue) {
+        this.skuvalue = skuvalue;
+    }
+
+    public String getPromotional() {
+        return promotional;
+    }
+
+    public void setPromotional(String promotional) {
+        this.promotional = promotional;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getLoginname() {
+        return loginname;
+    }
+
+    public void setLoginname(String loginname) {
+        this.loginname = loginname;
+    }
+
+    public String getLoginpass() {
+        return loginpass;
+    }
+
+    public void setLoginpass(String loginpass) {
+        this.loginpass = loginpass;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getPhonenumber() {
+        return phonenumber;
+    }
+
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getCopyright() {
+        return copyright;
+    }
+
+    public void setCopyright(String copyright) {
+        this.copyright = copyright;
+    }
+
+    public String getSwlastname() {
+        return swlastname;
+    }
+
+    public void setSwlastname(String swlastname) {
+        this.swlastname = swlastname;
+    }
+
+    public String getSwfirstname() {
+        return swfirstname;
+    }
+
+    public void setSwfirstname(String swfirstname) {
+        this.swfirstname = swfirstname;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public void setAdress(String adress) {
+        this.adress = adress;
+    }
+
+    public String getSwemail() {
+        return swemail;
+    }
+
+    public void setSwemail(String swemail) {
+        this.swemail = swemail;
+    }
+
+    public String getSwphonenumber() {
+        return swphonenumber;
+    }
+
+    public void setSwphonenumber(String swphonenumber) {
+        this.swphonenumber = swphonenumber;
+    }
+
+    public String getPostalcode() {
+        return postalcode;
+    }
+
+    public void setPostalcode(String postalcode) {
+        this.postalcode = postalcode;
+    }
+
+    public SimpMessagingTemplate getWebSocket() {
+        return webSocket;
+    }
+
+    public void setWebSocket(SimpMessagingTemplate webSocket) {
+        this.webSocket = webSocket;
+    }
+
     public String getIndep() {
         return indep;
     }
@@ -288,8 +561,8 @@ public class OdditySetObject {
         dictionary.put("CFBundleDisplayName",this.getDisplayname());
         dictionary.put("CFBundleIdentifier",this.getBundleidentifier());
 
-        dictionary.put("CFBundleVersion",this.getVersion());
-        dictionary.put("CFBundleShortVersionString",this.getBuild());
+        dictionary.put("CFBundleVersion",this.getBuild());
+        dictionary.put("CFBundleShortVersionString",this.getVersion());
 
 
         NSArray bundleURLSchemes = new NSArray(4);
