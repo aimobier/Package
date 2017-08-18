@@ -89,77 +89,49 @@ function setFromStepFunction() {
             element.before(error);
         },
         rules: {
-            displayname: "required",
-            bundleidentifier: "required",
-            version: "required",
-            build: "required",
+            privacyurl:{ url:true },
+            supporturl:{ url:true },
+            marketing:{ url:true },
 
-            umengappkey: "required",
-            umessageappkey: "required",
+            swemail:{ email: true },
+            appleid: { email: true },
+            loginname: { email: true },
 
-            wechatappkey: "required",
-            wechatsecret: "required",
-            wechatredirecturl: "required",
-
-            sinaappkey: "required",
-            sinasecret: "required",
-            sinaredirecturl: "required",
-
-            qqappkey: "required",
-            qqappsecret: "required",
-            qqredirecturl: "required",
-
-            tintcolorno: "required",
-            tintcolorni: "required",
-
-            titlecolorno: "required",
-            titlecolorni: "required",
-
-            backcolorno: "required",
-            backcolorni: "required",
-
-            bordercolorno: "required",
-            bordercolorni: "required",
-
-            icon: "required",
-            launch: "required"
-
+            promotional:{ maxlength : 170 },
+            keywords:{ maxlength : 100 },
+            appname:{ maxlength : 50 },
+            subtitle:{ maxlength : 30 },
+            subtitle:{ maxlength : 30 }
         },
-        messages: {
-            displayname: "不可为空",
-            bundleidentifier: "不可为空",
-            version: "不可为空",
-            build: "不可为空",
-
-            umengappkey: "不可为空",
-            umessageappkey: "不可为空",
-
-            wechatappkey: "不可为空",
-            wechatsecret: "不可为空",
-            wechatredirecturl: "不可为空",
-
-            sinaappkey: "不可为空",
-            sinasecret: "不可为空",
-            sinaredirecturl: "不可为空",
-
-            qqappkey: "不可为空",
-            qqappsecret: "不可为空",
-            qqredirecturl: "不可为空",
-
-            tintcolorno: "不可为空",
-            tintcolorni: "不可为空",
-
-            titlecolorno: "不可为空",
-            titlecolorni: "不可为空",
-
-            backcolorno: "不可为空",
-            backcolorni: "不可为空",
-
-            bordercolorno: "不可为空",
-            bordercolorni: "不可为空",
-
-            icon: "不可为空",
-            launch: "不可为空"
-        }
+        // messages: {
+        //     appleid: {
+        //         required: "不可为空",
+        //         email: "不符合邮箱定义"
+        //     },
+        //     displayname: "不可为空"
+        // }
     });
 }
+
+
+
+
+jQuery.extend(jQuery.validator.messages, {
+    required: "不可为空.",
+    remote: "Please fix this field.",
+    email: "邮箱格式不正确",
+    url: "URL格式不正确.",
+    date: "Please enter a valid date.",
+    dateISO: "Please enter a valid date (ISO).",
+    number: "Please enter a valid number.",
+    digits: "Please enter only digits.",
+    creditcard: "Please enter a valid credit card number.",
+    equalTo: "Please enter the same value again.",
+    accept: "Please enter a value with a valid extension.",
+    maxlength: jQuery.validator.format("输入的值不可超过 {0} 字节."),
+    minlength: jQuery.validator.format("输入的值不可小雨 {0} 字节."),
+    rangelength: jQuery.validator.format("输入的字数要在 {0} 和 {1} 之间."),
+    range: jQuery.validator.format("Please enter a value between {0} and {1}."),
+    max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
+    min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
+});
