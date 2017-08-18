@@ -15,8 +15,6 @@ Dropzone.options.dropzoneForm = {
 };
 
 
-
-
 function flotConfigFunction() {
 
     var sparklineCharts = function(){
