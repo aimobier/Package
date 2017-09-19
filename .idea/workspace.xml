@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94cc99d9-fd0c-47bb-9c41-f62fa903d85a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shell/icon/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shell/launch/Contents.json" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/shell/iconshear.sh" afterPath="$PROJECT_DIR$/shell/image/iconshear.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/shell/launchshear.sh" afterPath="$PROJECT_DIR$/shell/image/launchshear.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/aimobier/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/aimobier/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/aimobier/config/WebMvcConfigurer.java" afterPath="$PROJECT_DIR$/src/main/java/com/aimobier/config/WebMvcConfigurer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/aimobier/controller/PackageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/aimobier/controller/PackageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/aimobier/entity/OdditySetObject.java" afterPath="$PROJECT_DIR$/src/main/java/com/aimobier/entity/OdditySetObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/aimobier/util/PathUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/aimobier/util/PathUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/index.html" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/oddity/custom.js" afterPath="$PROJECT_DIR$/src/main/resources/public/oddity/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/oddity/form.js" afterPath="$PROJECT_DIR$/src/main/resources/public/oddity/form.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -75,14 +63,9 @@
       <file leaf-file-name="OdditySetObject.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aimobier/entity/OdditySetObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="563" column="54" lean-forward="false" selection-start-line="563" selection-start-column="54" selection-end-line="563" selection-end-column="54" />
-              <folding>
-                <element signature="e#7745#7746#0" expanded="true" />
-                <element signature="e#7775#7776#0" expanded="true" />
-                <element signature="e#7891#7892#0" expanded="true" />
-                <element signature="e#7919#7920#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="780">
+              <caret line="614" column="64" lean-forward="false" selection-start-line="614" selection-start-column="64" selection-end-line="614" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,7 +73,7 @@
       <file leaf-file-name="Generator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aimobier/util/Generator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
+            <state relative-caret-position="1995">
               <caret line="133" column="54" lean-forward="false" selection-start-line="133" selection-start-column="54" selection-end-line="133" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -102,7 +85,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
+            <state relative-caret-position="5025">
               <caret line="335" column="42" lean-forward="false" selection-start-line="335" selection-start-column="42" selection-end-line="335" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#fieldset#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -129,7 +112,7 @@
       <file leaf-file-name="launchshear.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shell/image/launchshear.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="934">
+            <state relative-caret-position="1110">
               <caret line="74" column="2" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="101" selection-end-column="21" />
               <folding />
             </state>
@@ -596,108 +579,106 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="shell" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="shell" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aimobier" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aimobier" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aimobier" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aimobier" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="oddity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
+              <item name="Package" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -706,6 +687,8 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -868,16 +851,17 @@
       <workItem from="1502866823938" duration="10307000" />
       <workItem from="1502936284952" duration="2033000" />
       <workItem from="1502964041662" duration="2772000" />
-      <workItem from="1503023307068" duration="18907000" />
+      <workItem from="1503023307068" duration="19407000" />
+      <workItem from="1503283213304" duration="520000" />
+      <workItem from="1503643414496" duration="267000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151280000" />
+    <option name="totallyTimeSpent" value="152567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="2556" height="1417" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -895,14 +879,13 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25189108" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25189108" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21917263" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22235481" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17700455" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -911,6 +894,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17700455" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1085,7 +1069,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="38" column="81" lean-forward="false" selection-start-line="38" selection-start-column="81" selection-end-line="38" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1095,7 +1078,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,7 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="97" column="21" lean-forward="false" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,7 +1092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="1267" column="30" lean-forward="false" selection-start-line="1267" selection-start-column="30" selection-end-line="1267" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,9 +1099,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding>
-            <marker date="1503038173000" expanded="true" signature="273:305" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1129,39 +1106,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="106" column="25" lean-forward="false" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shell/test.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/test.sh" />
     <entry file="file://$PROJECT_DIR$/shell/image/launchstoryboard.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="45" column="22" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shell/config/Appfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="93" lean-forward="false" selection-start-line="6" selection-start-column="93" selection-end-line="6" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/config/Appfile" />
     <entry file="file://$PROJECT_DIR$/../FTest/fastlane/Fastfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="56" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1169,7 +1129,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1177,26 +1136,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="934">
           <caret line="73" column="11" lean-forward="false" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shell/image/launchshear.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="934">
+        <state relative-caret-position="1110">
           <caret line="74" column="2" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="101" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shell/READ.me">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/READ.me" />
     <entry file="file://$PROJECT_DIR$/shell/appInfoConfig.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -1217,7 +1168,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="32" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1239,7 +1189,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aimobier/util/Generator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
+        <state relative-caret-position="1995">
           <caret line="133" column="54" lean-forward="false" selection-start-line="133" selection-start-column="54" selection-end-line="133" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1259,7 +1209,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
+        <state relative-caret-position="5025">
           <caret line="335" column="42" lean-forward="false" selection-start-line="335" selection-start-column="42" selection-end-line="335" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#fieldset#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1274,14 +1224,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aimobier/entity/OdditySetObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="563" column="54" lean-forward="false" selection-start-line="563" selection-start-column="54" selection-end-line="563" selection-end-column="54" />
-          <folding>
-            <element signature="e#7745#7746#0" expanded="true" />
-            <element signature="e#7775#7776#0" expanded="true" />
-            <element signature="e#7891#7892#0" expanded="true" />
-            <element signature="e#7919#7920#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="780">
+          <caret line="614" column="64" lean-forward="false" selection-start-line="614" selection-start-column="64" selection-end-line="614" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
